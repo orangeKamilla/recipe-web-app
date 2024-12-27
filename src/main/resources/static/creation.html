@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="categories.js"></script>
+</head>
+<body>
+<header>
+    <a href="index.html"><img src="media/logo1.png" /></a>
+
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+            <li class="nav-item"><a href="creation.html" class="nav-link"><i class="fa-solid fa-plus"></i>Add Receipe</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="container mt-5">
+        <h2>Add a New Recipe</h2>
+
+        <form id="titleForm" class="mb-4">
+            <div class="form-group">
+                <label for="recipeTitle">Recipe Title</label>
+                <input type="text" class="form-control" id="recipeTitle" placeholder="Enter recipe title">
+            </div>
+        </form>
+
+        <form id="imageForm" class="mb-4">
+            <div class="form-group">
+                <label for="recipeImage">Recipe Image URL</label>
+                <input type="text" class="form-control" id="recipeImage" placeholder="Enter image URL">
+            </div>
+        </form>
+
+        <form id="categoryForm" class="mb-4">
+            <div class="form-group">
+                <label for="recipeCategory">Category</label>
+                <input type="text" class="form-control" id="recipeCategory" placeholder="Enter category">
+            </div>
+        </form>
+
+        <form id="descriptionForm" class="mb-4">
+            <div class="form-group">
+                <label for="recipeDescription">Description</label>
+                <textarea class="form-control" id="recipeDescription" rows="3" placeholder="Enter description"></textarea>
+            </div>
+        </form>
+
+        <form id="ingredientsForm" class="mb-4">
+            <div class="form-group">
+                <label for="recipeIngredients">Ingredients (one per line)</label>
+                <textarea class="form-control" id="recipeIngredients" rows="5" placeholder="Enter ingredients"></textarea>
+            </div>
+        </form>
+
+        <form id="instructionsForm" class="mb-4">
+            <div class="form-group">
+                <label for="recipeInstructions">Instructions (one step per line)</label>
+                <textarea class="form-control" id="recipeInstructions" rows="5" placeholder="Enter instructions"></textarea>
+            </div>
+        </form>
+
+        <button id="submitRecipe" class="btn btn-primary">Submit Recipe</button>
+    </div>
+</main>
+
+<footer>
+    <div class="orange-icon">
+
+        <img src="media/logo1.png"/>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+    </div>
+    <div class="links">
+        <ul>
+            <li>Terms</li>
+            <li>CopyRight</li>
+            <li>Socials</li>
+        </ul>
+    </div>
+
+</footer>
+<script src="creation.js"></script>
+<script src="recipe.js"></script>
+<script src="slider.js"></script>
+<script src="categories.js"></script>
+<script src="https://kit.fontawesome.com/73079b33af.js" crossorigin="anonymous"></script>
+</body>
+</html>
