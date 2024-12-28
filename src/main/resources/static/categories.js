@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         })
-        .catch(error => console.error('Error: ', error));
+        .catch(error => recipeDashboard.innerHTML = "<p>Error loading recipes. Please try again later.</p>");
 
     function filterRecipesByCategory(categoryName) {
         if(categoryName === "All"){
@@ -51,24 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error('Error:', error));
     }
 
-    fetch('/api/recipes')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch all recipes');
-            }
-            return response.json();
-        })
-        .then(recipes => {
-            recipeDashboard.innerHTML = recipes.map(recipe => `
-                <div class="recipe-item">
-                    <img src="${recipe.image}" alt="${recipe.title}">
-                    <h6><a href="recipe.html?id=${recipe.id}">${recipe.title}</a></h6>
-                    <p>${recipe.description}</p>
-                    <div class="star-rating-display">${createStarRating(recipe.rating)}</div>
-                </div>
-            `).join('');
-        })
-        .catch(error => console.error('Error fetching all recipes:', error));
+
 });
 
 function createStarRating(rating) {
